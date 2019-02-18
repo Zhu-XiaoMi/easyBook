@@ -1,0 +1,28 @@
+.weui-cell{
+	height: 135rpx;
+}
+.weui-cells__title{
+	font-size: 34rpx;
+}
+.weui-cell__hd image{
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 50px; 
+	height: 50px;
+}
+.weui-cell__bd{
+	font-size: 35rpx;
+	
+
+}
+
+.weui-cell__ft{
+	font-size: 29rpx;
+	color: #999;
+	padding-right: 10rpx;
+	margin-right: 10rpx;
+	border-right: 1px solid #999;
+}
+.weui-cell__ft:last-child{
+		border-style: none;
+}

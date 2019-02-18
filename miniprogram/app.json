@@ -1,0 +1,56 @@
+{
+  "cloud": true,
+  "pages": ["pages/addNovel/addNovel",
+    "pages/adminNovel/adminNovel",
+    
+    "pages/main/main",    
+    "pages/index/index", 
+    "pages/search/search",
+    "pages/bookStore/bookStore",
+    "pages/list/list",
+    "pages/shelf/shelf",
+    "pages/details/details",
+    "pages/read/read"   
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "easyBook",
+    "navigationBarBackgroundColor": "white",
+    "backgroundColor": "white"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#d4237a",
+    "borderStyle": "black",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "asset/images/ico_index.png",
+        "selectedIconPath": "asset/images/ico_index_d.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/bookStore/bookStore",
+        "iconPath": "asset/images/ico_shelf.png",
+        "selectedIconPath": "asset/images/ico_shelf_d.png",
+        "text": "书库"
+      },
+      {
+        "pagePath": "pages/shelf/shelf",
+        "iconPath": "asset/images/ico_shelf.png",
+        "selectedIconPath": "asset/images/ico_shelf_d.png",
+        "text": "书架"
+      }
+      
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "cloud": true
+}

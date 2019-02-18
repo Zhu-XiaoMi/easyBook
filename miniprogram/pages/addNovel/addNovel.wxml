@@ -1,0 +1,61 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  
+  <view class="section">
+    <view class="section__title">小说名</view>
+    <input name="input" placeholder="长度少于12位" bindblur="bindTitle" />
+  </view>
+  <view class="section">
+    <view class="section__title">小说作者</view>
+    <input name="input" placeholder="长度少于12位" bindblur="bindAuthor"/>
+  </view>
+  <view class="section">
+    <view class="section__title">小说简介</view>
+    <textarea placeholder="please input here" maxlength="120" bindblur="bindDesciption"/>1
+  </view>
+  <view class="section">
+    <view class="section__title">小说评分</view>
+    <input name="input" placeholder="please input here" bindblur="bindGrade"/>
+  </view>
+  <view class="section">
+    <view class="section__title">小说图片</view>
+    <input name="input" placeholder="please input here" bindblur="bindImg"/>
+  </view>
+  <view class="section">
+    <view class="section__title">收藏量</view><text hidden="true">请输入数字</text>
+    <input name="input" placeholder="please input here" bindblur="bindRead"/>
+  </view>
+   <view class="section section_gap">
+    <view class="section__title">小说状态</view>
+    <radio-group class="radio-group" bindchange="stateChange">
+      <label class="radio">
+        <radio value="完结" checked="true"/>
+        完结
+      </label>
+      <label class="radio">
+        <radio value="连载" />
+        连载
+      </label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">小说标签</view>
+    <radio-group class="radio-group" bindchange="tagChange">
+      <label class="radio">
+        <radio value="男生" checked="true"/>
+        男生
+      </label>
+      <label class="radio">
+        <radio value="女生" />
+        女生
+      </label>
+    </radio-group>
+  </view>
+  <view class="section">
+    <view class="section__title">小说类型</view>
+    <input name="input" placeholder="please input here" bindblur="bindType"/>
+  </view>
+  <view class="btn-area">
+    <button form-type="submit">Submit</button>
+    <button form-type="reset">Reset</button>
+  </view>
+</form>

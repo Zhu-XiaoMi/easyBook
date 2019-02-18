@@ -1,0 +1,32 @@
+<!-- index.wxml -->
+<view class="">
+  <!-- 头像 -->
+  <view class="head-wrap">
+    <view class="head-img-box">
+      <open-data type="userAvatarUrl" ></open-data>
+    </view>
+    <view class="head-name-box">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view>
+  <!-- 阅读记录 -->
+  
+ </view>
+ <view>  
+        <block  wx:for="{{novels}}" wx:key="novels.id">
+          <view class="novel-lists" bindtap="toRead" data-id="{{item.id}}">
+            <image class="novel-img" src="{{item.img}}" ></image>
+            <view class="list-content" >
+                <view class="novel-title">{{item.title}}</view>
+                <view class="list-bottom">
+                    <view class="list-author">
+                      {{item.author}}
+                    </view>   
+                    <view class="state"> 
+                        {{item.state}}
+                    </view>      
+                </view>      
+            </view>
+        </view>
+      </block> 
+   </view>

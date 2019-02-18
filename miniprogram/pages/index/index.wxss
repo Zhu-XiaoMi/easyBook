@@ -1,0 +1,170 @@
+/*头部*/
+.header{
+    height: 175rpx;
+    position: fixed;
+    z-index: 10000;
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 1px -1px 15px #a3a3a3;
+}
+.header-nav{
+    height: 63rpx;
+    display: flex;
+    justify-content: space-between;
+    margin: 18rpx 35rpx;
+    align-items: Center;
+}
+/* 搜索框 */
+.search-box {
+   width: 81%;
+   height: 100%;
+   border-radius: 5rpx;
+   font-size: 23rpx;
+   background: #f2f2f2;
+   padding: 0 70rpx;
+   color: #a3a3a3;
+}
+
+.icon{
+    position: absolute;
+    top: 34rpx;
+    left: 66rpx;
+}
+
+
+
+/*图片*/
+.read-image{
+    height: 136rpx;  
+    margin-top: 170rpx;
+    padding: 35rpx 35rpx;
+}
+.read-item-img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*导航*/
+.navbar{
+    margin: 10rpx 35rpx;
+}
+.navbar .item{
+    position: relative; 
+    font-size: 28rpx;
+    color: #bdc9d9;
+}
+.item{
+    margin-right: 45rpx;
+}
+
+.navbar .item.active{ 
+ color: black; 
+ font-size: 35rpx;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: -17rpx; 
+ left: 12rpx; 
+ right: 0; 
+ height: 6rpx; 
+ width: 46rpx;
+ border-radius: 25rpx;
+ background: blue; 
+}
+
+
+/*书本列表*/
+.book-wrap{
+    margin-top: 40rpx;
+    padding: 0 35rpx 0rpx;
+    font-size: 43rpx;
+}
+/*今日推荐*/
+.currentTab{
+    margin-top: 7rpx;
+    background: #f8f9fb;
+}
+
+.book-list{
+    height: 609rpx;
+    margin: 15rpx 0 35rpx;
+    padding: 45rpx;
+    border-radius: 1%;
+    background: white;
+    box-shadow: 0px 5px 30px #e8e8e8;
+}
+.book-item{
+    width: 100%;
+    display: flex;
+    height: 190rpx;
+    border-radius: 4%;
+}
+.book-item-img{
+    width: 140rpx;
+    height: 190rpx;
+    box-shadow:1px 1px 20px #e8e8e8;
+}
+.book-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 30rpx;
+}
+.book-item-name{
+    font-size: 43rpx;
+    line-height: 50rpx;
+}
+.book-item-author{
+    font-size: 25rpx;
+    color: #999;
+    margin:12rpx 0 7rpx;   
+}
+.book-item-mark{
+    font-size: 28rpx;
+
+}
+.book-item-grade{
+    font-size: 28rpx;
+    color: #ff9a35;
+}
+.book-introduction{
+    height: 148rpx; 
+    font-size: 31rpx;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: gray;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-top: 40rpx;
+}
+.book-reason{
+    font-size: 31rpx;
+    text-align: center;
+    margin-top: 45rpx;
+    color: #ff9a35;
+}
+.book-read{
+    width: 560rpx;
+    height: 70rpx;
+    margin-top: 55rpx;
+    text-align: center;
+    background: skyblue;
+    border-radius: 25px;
+}
+.book-read-text{
+    font-size: 35rpx;
+    color: white;
+}
+
+.finish{
+    text-align: center;
+    font-size: 30rpx;
+    color: gray;
+    padding-bottom: 20rpx;
+}

@@ -1,0 +1,84 @@
+<!-- index.wxml -->
+<view class="container">
+
+  <!-- 头部 -->
+  <view class="header">
+
+    <view class="header-nav">
+
+      <!-- 搜索框 -->
+        <input class="search-box" type="text"  placeholder="搜索" disabled="true" bindtap="searchBtn"><icon class="icon" type="search" size="12" /></input>
+    </view>
+
+  <!-- 男生女生分类 -->
+    <view class="navbar"> 
+        <text wx:for="{{navbar}}" data-idx="{{index}}" data-tag="{{item}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="navbar.id" bindtap="navbarTap">{{item}}</text> 
+    </view> 
+  </view>
+
+  <!-- 男生 -->
+    <view class="currentTab" hidden="{{currentTab!==0}}"> 
+        <view class="read-image">
+            <image class="read-item-img" src="../../asset/images/read-image/read.jpg" mode="aspectFill"></image>
+        </view>
+
+  <!-- 今日推荐 -->
+    <view class="book-wrap">
+        <view class="book-wrap-tlite">
+          <text class="book-tlite-text">今日推荐</text>
+        </view>
+        <block  wx:for="{{lists}}" wx:key="*this">
+          <view class="book-list">
+            <template is="lists" data="{{...item}}" />
+          </view>
+        </block>
+    </view> 
+    <view class="finish">
+               已加载全部
+    </view>
+    </view> 
+  
+    <!--女生-->
+    <view class="currentTab" hidden="{{currentTab!==1}}"> 
+        <view class="read-image">
+            <image class="read-item-img" src="../../asset/images/read-image/read.jpg" mode="aspectFill"></image>
+        </view>
+
+  <!-- 今日推荐 -->
+    <view class="book-wrap">
+          <view class="book-wrap-tlite">
+            <text class="book-tlite-text">今日推荐</text>
+          </view>
+          <block wx:for="{{lists}}" wx:key="lists.id">
+            <view class="book-list">
+               <template is="lists" data="{{...item}}" />
+            </view>
+          </block>
+          
+    </view> 
+    <view class="finish">
+             已加载全部
+    </view>
+    </view>      
+</view>
+
+ <template name="lists">
+              <view class="book-item" >
+                <image src="{{img}}"  mode="scaleToFill" class="book-item-img"></image>
+                <view class="book-content">
+                  <text class="book-item-name">{{title}}</text>
+                  <text class="book-item-author">{{author}}</text>
+                  <text class="book-item-mark">评分<text class="book-item-grade">{{grade}}</text></text>
+                </view>
+                
+            </view>
+            <view class="book-introduction" >
+             {{description}}
+            </view>
+            <view class="book-reason" >
+             - {{reason}} -
+            </view>
+            <view class="book-read">
+             <view class="book-read" bindtap="feelRead" data-novelid="{{id}}"><text class="book-read-text">免费阅读</text></view>
+            </view>     
+  </template>

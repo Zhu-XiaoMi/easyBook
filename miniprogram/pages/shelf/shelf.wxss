@@ -1,0 +1,70 @@
+/**index.wxss**/
+
+.head-wrap {
+    display: flex;
+    padding: 16rpx;
+    justify-content: center;
+    flex-direction: column;
+    background: pink;
+}
+.head-img-box {
+    width: 160rpx;
+    height: 160rpx;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.head-name-box {
+    display: inline-block;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #fff;
+    padding: 23rpx 0 0 0;
+}
+
+
+.novel-lists{
+    height: 200rpx;
+    margin: 0 35rpx;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+.nav{
+    display: block;
+}
+.novel-img{
+    width: 130rpx;
+    height: 140rpx;
+    box-shadow:1px 1px 5px #d4d5da;
+}
+.list-content{
+    display: flex;
+    width: 100%;
+    height: 130rpx;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 35rpx; 
+}
+.novel-title{
+    font-size: 35rpx;
+}
+
+.list-bottom{
+    font-size: 25rpx;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.state{
+    width: 70rpx;
+    height: 30rpx;
+    text-align: center;
+    line-height: 30rpx;
+    border: 1px solid #d4d5da;
+    border-radius: 5rpx;
+}
+

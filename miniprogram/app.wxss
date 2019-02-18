@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import 'asset/style/weui.wxss';
+
+	page {
+	  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+	  background: white;
+	}

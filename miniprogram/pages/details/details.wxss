@@ -1,0 +1,214 @@
+
+/*左侧导航  */
+.page-top{
+  position: fixed;
+  width: 75%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: rotate(0deg) scale(1) translate(-100%,0%); 
+  transition: 0.4s;
+  z-index: 998;
+}
+.page-top-show{
+  transform: rotate(0deg) scale(1) translate(0%,0%); 
+  -webkit-transform: rotate(0deg) scale(1) translate(0%,0%); 
+}
+.nav-list{
+  padding: 24rpx 0;
+  margin: 0 30rpx;
+  font-size: 33rpx;
+  border-bottom: 1px solid #999;
+}
+
+/*右侧展示  */
+.page-bottom{
+  position: relative;
+}
+.page-mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.page-mask-hide{
+  display: none;
+}
+
+/* 书本信息 */
+
+.book-info-box {
+    margin-top: 10rpx;
+    height: 450rpx;
+    text-align: center;
+}
+.book-cover {
+    width: 168rpx;
+    height: 220rpx;
+}
+.book-info{
+    margin-top: 22rpx;
+    display: flex;
+    flex-direction: column;
+}
+.book-name {
+    font-size: 48rpx;
+    font-weight: bold;
+}
+.book-info-wrap{
+   font-size: 26rpx;
+   margin-top: 13rpx;
+   color: gray;
+}
+.book-author{
+    margin-right: 10rpx;
+}
+.tag {
+    padding-left: 10rpx;
+    border-left: 1px solid gray;
+}
+
+
+/* 书本统计 */
+
+.book-data-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-bottom: 20rpx;
+}
+
+.book-data-item {
+    width: 33%;
+    text-align: center;
+}
+.book-number {
+    font-size: 42rpx;
+}
+
+.book-unit {
+    font-size: 26rpx;
+}
+
+.book-title {
+    font-size: 26rpx;
+    color: #aaa;
+}
+
+/*书本介绍*/ 
+.book-intro-wrap {
+    margin:0 30rpx 24rpx;
+    font-size: 30rpx;
+    padding: 28rpx 0;
+    height: 73rpx;
+    border-top: 1px solid #999; 
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.book-intro-pull{
+  overflow: visible;
+  -webkit-line-clamp: 100;
+  margin:0 30rpx;
+  height: auto;
+}
+.book-text {
+    font-size: 24rpx;
+}
+
+/*目录*/
+.book-catalog-seek{
+    height: 50rpx;
+    margin: 0 30rpx;
+    padding: 25rpx 0;
+    display: flex;
+    border-top: 1px solid #ddd;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #999;
+}
+.book-catalog-item{
+    font-size: 30rpx;
+}
+.off-nav-list{
+   width: 40rpx;
+   height: 28rpx;
+}
+.book-catalog-time{
+    font-size:26rpx;
+}
+
+
+/*目录列表*/
+.book-catalog-list{
+  padding: 0 30rpx;
+  border-bottom: 1px solid #999;
+}
+.catalog-last-item{
+  margin-bottom: 130rpx;
+  border-style: none;
+}
+.book-bd{
+    margin-top: 20rpx;
+    font-size: 34rpx;
+}
+.list-ft{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 25rpx;
+    margin-bottom: 10rpx;
+}
+.list-time{
+  display: flex;
+  align-items: flex-end;
+  font-size: 25rpx;
+  color: gray;
+  margin-bottom: 30rpx;
+}
+.list-img{
+    width: 44rpx;
+    height: 41rpx;
+}
+
+/* 按钮 */
+.nav-bottom{
+  border-top: 1px solid #ccc;
+  box-shadow: 1px -1px 10px #ccc;
+  width: 100%;
+  position: fixed;
+  height: 124rpx;
+  bottom: 0;
+  background-color: white;
+}
+.m-nav{
+  display: flex;
+  height: 100%;
+  font-size: 31rpx;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30rpx;
+}
+.btn-read{
+  width: 49%;
+  height: 56%;
+  text-align: center;
+  line-height: 67rpx;
+  color: white;
+  background-color: skyblue;
+  border-radius: 50rpx;
+}
+.btn-shelf{
+  width: 49%;
+  height: 56%;
+  line-height: 67rpx;
+  text-align: center;
+}
