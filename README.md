@@ -13,7 +13,7 @@
 <img src="/miniprogram/asset/images/show/2.jpg" width = 270px height = 540px />
 - **书籍列表**  
 
-<img src="/miniprogram/asset/images/show/3.jpg" width = 270px height = 540px /><img src="/miniprogram/asset/images/show/4.jpg" width = 270px height = 540px />
+<img src="/miniprogram/asset/images/show/3.jpg" width = 270px height = 540px /> <img src="/miniprogram/asset/images/show/4.jpg" width = 270px height = 540px />
 
 
 - **书籍详情页**
@@ -28,11 +28,11 @@
 
 <img src="/miniprogram/asset/images/show/7.jpg" width = 270px height = 540px />
 
-- **书架**  
-
-<img src="/miniprogram/asset/images/show/8.jpg" width = 270px height = 540px /> 
-
 - **模糊查询**  
+
+<img src="/miniprogram/asset/images/show/8.jpg" width = 270px height = 540px />
+
+- **书架**  
 
 <img src="/miniprogram/asset/images/show/9.jpg" width = 270px height = 540px />
 
