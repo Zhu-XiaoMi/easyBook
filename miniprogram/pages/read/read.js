@@ -9,8 +9,12 @@ Page({
         show: false,
         hide: false,
         day: false,
-        color: "#f3f3f3",
-        font_color: "black",
+        offsetTop: 0,
+        color: "#f8faf9",
+        pcolor: "white",
+        font_color: "#333333",
+        border_bottom: "1px solid #f2f2f2",
+        bcolor: "white",
         nav_list: [],
         chaptertitle: "",
         img: "",
@@ -25,6 +29,12 @@ Page({
     },
     
     off_canvas(){ 
+      if(this.data.open == true){
+        wx.pageScrollTo({
+          scrollTop: offsetTop,
+          duration: 1
+        })
+      }
         this.setData({
             open: !this.data.open,
             look: false,
@@ -43,8 +53,11 @@ Page({
       this.setData({
             day: !this.data.day
         })
-      this.data.color == "#f3f3f3" ? this.setData({color: "gray"}) : this.setData({color: "#f3f3f3"})
-      this.data.font_color == "black" ? this.setData({font_color: "white"}) : this.setData({font_color: "black"})
+      this.data.pcolor == "white" ? this.setData({pcolor: "gray"}) : this.setData({pcolor: "white"})
+      this.data.bcolor == "white" ? this.setData({bcolor: "#676767"}) : this.setData({bcolor: "white"})
+      this.data.color == "#f8faf9" ? this.setData({color: "#585858"}) : this.setData({color: "#f8faf9"})
+      this.data.font_color == "#333333" ? this.setData({font_color: "gray"}) : this.setData({font_color: "#333333"})
+      this.data.border_bottom == "1px solid #f2f2f2" ? this.setData({border_bottom: "1px solid #999999"}) : this.setData({border_bottom: "1px solid #f2f2f2"})
     },
 
     lookShelf(){
@@ -56,7 +69,8 @@ Page({
 
     tolist(e){
       this.setData({
-        chapterid: e.currentTarget.dataset.chapterid
+        chapterid: e.currentTarget.dataset.chapterid,
+        offsetTop: e.currentTarget.offsetTop
       })
       this.Main()
       this.setData({
@@ -64,7 +78,7 @@ Page({
       })
       wx.pageScrollTo({
         scrollTop: 0,
-        duration: 3
+        duration: 1
       })
     },
 
@@ -138,6 +152,9 @@ Page({
                 author: res.data[0].author,
                 state: res.data[0].state
               })
+              wx.setNavigationBarTitle({
+                 title: this.data.noveltitle
+            })
         })
     },
 
@@ -167,7 +184,7 @@ Page({
               })
         })
     },
-    
+   
     onLoad(options){
         let that = this
         let chapterid = parseInt(options.chapterid)
@@ -235,7 +252,7 @@ Page({
     readView(){
       let that = this
       let renderView = function(res){
-          let str = res.data[0].content.split('&hc').join('\n')
+          let str = res.data[0].content.split(' ').join('\n&emsp;&emsp;')
           that.setData({
             content: str,
             chaptertitle: res.data[0].title

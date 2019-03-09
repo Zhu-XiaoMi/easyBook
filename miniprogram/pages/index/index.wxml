@@ -68,16 +68,12 @@
                 <view class="book-content">
                   <text class="book-item-name">{{title}}</text>
                   <text class="book-item-author">{{author}}</text>
-                  <text class="book-item-mark">评分<text class="book-item-grade">{{grade}}</text></text>
+                  <text class="book-item-mark">评分 <text class="book-item-grade">{{grade}}</text></text>
                 </view>
                 
             </view>
-            <view class="book-introduction" >
-             {{description}}
-            </view>
-            <view class="book-reason" >
-             - {{reason}} -
-            </view>
+            <view class="book-introduction" >{{description}}</view>
+            <view class="book-reason" >- {{reason}} -</view>
             <view class="book-read">
              <view class="book-read" bindtap="feelRead" data-novelid="{{id}}"><text class="book-read-text">免费阅读</text></view>
             </view>     

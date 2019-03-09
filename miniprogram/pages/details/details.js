@@ -7,11 +7,11 @@ Page({
         has: false,
         lastid: 0,
         pull:false,
-        count: 0,
         info: null,
-        catalog: [],
+        catalog: null,
         novelid: 0,
-        updatetime: null
+        updatetime: null,
+        count: 0
     },
 
     off_canvas(){
@@ -79,6 +79,10 @@ Page({
 	    }   
 	  that.Main()  
     },
+ 
+    toMore(){
+      console.log("11");
+    },
 
     Main(){
       let that = this
@@ -91,9 +95,10 @@ Page({
     detailModel(){
       let that = this
       let result = {}
+      let count = that.data.count
       let init = function(){
       	result.bookInfo =  that.getNovelInfo();
-      	result.chapterInfo = that.getChapterInfo();
+      	result.chapterInfo = that.getChapterInfo(count);
         return result
       }
       return {
@@ -104,10 +109,9 @@ Page({
     detailView(){
       let that = this
       let renderView = function(res){
-      	let num = 0 
-      	let lastid = 0
-      	let bookInfo = res.bookInfo
-      	let chapterInfo = res.chapterInfo
+      let lastid = 0
+      let bookInfo = res.bookInfo
+      let chapterInfo = res.chapterInfo
           bookInfo.then(res=>{
             res.data[0].updatetime = util.formatDate(res.data[0].updatetime);
             that.setData({
@@ -115,14 +119,10 @@ Page({
             })
           })     
           chapterInfo.then(res =>{
-            for(let index in res.data){
-              res.data[index].updatetime  = util.formatDate(res.data[index].updatetime);
-              num = num + res.data[index].count
-            }
-            let lastid = res.data.length
+            res.data[res.data.length - 1].updatetime  = util.formatDate(res.data[res.data.length - 1].updatetime);
+            let lastid = res.data.length - 1
             that.setData({
               catalog: res.data,
-              count: num,
               lastid: lastid,
               updatetime: res.data[res.data.length - 1].updatetime
             })
@@ -141,12 +141,12 @@ Page({
       return res;
     },
 
-    getChapterInfo(){
+    getChapterInfo(count){
       let that = this
       const db = wx.cloud.database()
       let res = db.collection('chapterinfo').where({
           novelid: this.data.novelid
-      })
+      }).skip(count).limit(20)
       .get()
       return res;
     },

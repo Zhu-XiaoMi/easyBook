@@ -32,7 +32,7 @@ Page({
         }
         
     },
-
+    
     onShow(){
         let that = this
         that.Main()

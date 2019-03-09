@@ -10,10 +10,10 @@
     box-shadow: 1px -1px 15px #a3a3a3;
 }
 .header-nav{
-    height: 63rpx;
+    height: 69rpx;
     display: flex;
     justify-content: space-between;
-    margin: 18rpx 35rpx;
+    margin: 13rpx 35rpx 18rpx;
     align-items: Center;
 }
 /* 搜索框 */
@@ -54,7 +54,7 @@
 .navbar .item{
     position: relative; 
     font-size: 28rpx;
-    color: #bdc9d9;
+    color: #b8c3d9;
 }
 .item{
     margin-right: 45rpx;
@@ -62,19 +62,19 @@
 
 .navbar .item.active{ 
  color: black; 
- font-size: 35rpx;
+ font-size: 34rpx;
 } 
 .navbar .item.active:after{ 
  content: ""; 
  display: block; 
  position: absolute; 
  bottom: -17rpx; 
- left: 12rpx; 
+ left: 10rpx; 
  right: 0; 
  height: 6rpx; 
- width: 46rpx;
+ width: 52rpx;
  border-radius: 25rpx;
- background: blue; 
+ background: #3399fe; 
 }
 
 
@@ -113,7 +113,7 @@
     display: flex;
     flex-direction: column;
     justify-content:center;
-    margin-left: 30rpx;
+    margin-left: 34rpx;
 }
 .book-item-name{
     font-size: 43rpx;
@@ -133,15 +133,16 @@
     color: #ff9a35;
 }
 .book-introduction{
-    height: 148rpx; 
-    font-size: 31rpx;
+    height: 133rpx; 
+    font-size: 32rpx;
+    line-height: 42rpx;
     display: -webkit-box;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: gray;
+    color: #666666;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    margin-top: 40rpx;
+    margin-top: 42rpx;
 }
 .book-reason{
     font-size: 31rpx;
@@ -150,7 +151,7 @@
     color: #ff9a35;
 }
 .book-read{
-    width: 560rpx;
+    width: 569rpx;
     height: 70rpx;
     margin-top: 55rpx;
     text-align: center;
@@ -165,6 +166,7 @@
 .finish{
     text-align: center;
     font-size: 30rpx;
-    color: gray;
+    line-height: 30rpx;
+    color: #ddd;
     padding-bottom: 20rpx;
 }

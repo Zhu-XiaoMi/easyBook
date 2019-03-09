@@ -1,16 +1,16 @@
 {
   "cloud": true,
-  "pages": ["pages/addNovel/addNovel",
+  "pages": [
+    "pages/main/main",
     "pages/adminNovel/adminNovel",
-    
-    "pages/main/main",    
+    "pages/addNovel/addNovel",
     "pages/index/index", 
     "pages/search/search",
     "pages/bookStore/bookStore",
     "pages/list/list",
     "pages/shelf/shelf",
     "pages/details/details",
-    "pages/read/read"   
+    "pages/read/read"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -19,8 +19,8 @@
     "backgroundColor": "white"
   },
   "tabBar": {
-    "color": "#666666",
-    "selectedColor": "#d4237a",
+    "color": "black",
+    "selectedColor": "#3399fe",
     "borderStyle": "black",
     "backgroundColor": "white",
     "list": [
@@ -32,8 +32,8 @@
       },
       {
         "pagePath": "pages/bookStore/bookStore",
-        "iconPath": "asset/images/ico_shelf.png",
-        "selectedIconPath": "asset/images/ico_shelf_d.png",
+        "iconPath": "asset/images/ico_room.png",
+        "selectedIconPath": "asset/images/ico_room_d.png",
         "text": "书库"
       },
       {

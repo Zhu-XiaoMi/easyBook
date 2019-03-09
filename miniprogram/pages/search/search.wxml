@@ -1,7 +1,7 @@
 <view class="header">
 
     <view class="header-nav" >
-       <input class="search-box" focus type="text" placeholder="请输入书名和作者名" confirm-type="搜索" bindblur="searchText" bindconfirm="query" ><icon class="icon" size="12" type="search"></icon></input>
+       <input class="search-box" focus type="text" placeholder="请输入书名和作者名" confirm-type="搜索" bindinput="searchText" bindconfirm="query" ><icon class="icon" size="12" type="search"></icon></input>
         <view class="search" bindtap="query">搜索</view>
     </view>
     <view class="nav_list" wx:if="{{result}}">
@@ -12,13 +12,9 @@
                 <image class="novel-img" src="{{item.img}}" ></image>
                 <view class="list-content" >
                     <view class="novel-title">{{item.title}}</view>
-                    <view class="list-intro">
-                         {{item.description}}
-                    </view>
+                    <view class="list-intro">{{item.description}}</view>
                     <view class="list-bottom">
-                        <view class="list-author">
-                            {{item.author}}
-                        </view>  
+                        <view class="list-author">{{item.author}}</view>  
                         <view class="state"> 
                             {{item.state}}
                         </view>        

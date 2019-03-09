@@ -49,6 +49,7 @@
 .book-cover {
     width: 168rpx;
     height: 220rpx;
+    box-shadow:1px 1px 5px #d4d5da;
 }
 .book-info{
     margin-top: 22rpx;
@@ -60,16 +61,16 @@
     font-weight: bold;
 }
 .book-info-wrap{
-   font-size: 26rpx;
-   margin-top: 13rpx;
-   color: gray;
+   font-size: 29rpx;
+   margin-top: 18rpx;
+   color: #666666;
 }
 .book-author{
     margin-right: 10rpx;
 }
 .tag {
     padding-left: 10rpx;
-    border-left: 1px solid gray;
+    border-left: 1px solid #f2f2f2;
 }
 
 
@@ -96,21 +97,22 @@
 
 .book-title {
     font-size: 26rpx;
-    color: #aaa;
+    color: #999999;
 }
 
 /*书本介绍*/ 
 .book-intro-wrap {
     margin:0 30rpx 24rpx;
-    font-size: 30rpx;
+    color: #666666;
+    font-size: 29rpx;
     padding: 28rpx 0;
-    height: 73rpx;
-    border-top: 1px solid #999; 
+    height: 103rpx;
+    border-top: 1px solid #f2f2f2; 
     display: -webkit-box;
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
 }
 .book-intro-pull{
   overflow: visible;
@@ -125,41 +127,45 @@
 /*目录*/
 .book-catalog-seek{
     height: 50rpx;
-    margin: 0 30rpx;
-    padding: 25rpx 0;
+    padding: 25rpx 30rpx;
     display: flex;
-    border-top: 1px solid #ddd;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #f2f2f2;
 }
 .book-catalog-item{
-    font-size: 30rpx;
+    font-size: 37rpx;
 }
 .off-nav-list{
    width: 40rpx;
    height: 28rpx;
 }
 .book-catalog-time{
-    font-size:26rpx;
+    font-size:25rpx;
+    color: #999999;
 }
 
+.divide{
+  height: 22rpx;
+  width: 100%;
+  background-color: #f2f2f2;
+}
 
 /*目录列表*/
 .book-catalog-list{
   padding: 0 30rpx;
-  border-bottom: 1px solid #999;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #f2f2f2;
 }
-.catalog-last-item{
-  margin-bottom: 130rpx;
-  border-style: none;
-}
+
 .book-bd{
     margin-top: 20rpx;
     font-size: 34rpx;
 }
 .list-ft{
     display: -webkit-box;
+    color: #666666;
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-box-orient: vertical;
@@ -172,13 +178,22 @@
   align-items: flex-end;
   font-size: 25rpx;
   color: gray;
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
 }
 .list-img{
     width: 44rpx;
     height: 41rpx;
 }
-
+.more_copy{
+  height: 30rpx;
+  width: 100%;
+  margin-bottom: 154rpx;
+  text-align: center;
+}
+.more{
+  width: 60rpx;
+  height: 60rpx;
+}
 /* 按钮 */
 .nav-bottom{
   border-top: 1px solid #ccc;

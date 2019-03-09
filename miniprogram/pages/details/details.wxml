@@ -14,14 +14,14 @@
     <!-- 书本统计 -->
     <view class="book-data-wrap">
         <view class="book-data-item">
-            <text class=" book-number">{{count}}</text>
-            <text class="book-unit">字</text>
-            <view class="book-title">{{info.state}}</view>
+            <text class=" book-number">{{info.collect}}</text>
+            <text class="book-unit">万+</text>
+            <view class="book-title">收藏</view>
         </view>
         <view class="book-data-item">
             <text class=" book-number">{{info.read}}</text>
             <text class="book-unit">万+</text>
-            <view class="book-title">收藏</view>
+            <view class="book-title">读过</view>
         </view>
         <view class="book-data-item">
             <text class=" book-number">{{info.grade}}</text>
@@ -30,13 +30,12 @@
         </view>
     </view>
     <!-- 书本介绍 -->
-    <view class="book-intro-wrap {{pull? 'book-intro-pull' : ''}}" bindtap="detailed">
-            {{info.description}}
-    </view>
+    <text class="book-intro-wrap {{pull? 'book-intro-pull' : ''}}" bindtap="detailed">{{info.description}}
+    </text>
     <!-- 查看目录 -->
    
     <view class="page-top {{open ? 'page-top-show' : ''}}">
-    <scroll-view scroll-y style="height:100%;" scroll-top="0">
+    <scroll-view scroll-y style="height:100%;" scroll-top="0" bindscrolltolower="toMore">
     <block wx:for="{{catalog}}" wx:key="catalog.id">
 	    <view class="nav-list">
 	        <navigator url="../read/read?chapterid={{item.chapterid}}&novelid={{item.novelid}}" hover-class="none" open-type="navigate">
@@ -46,11 +45,10 @@
 	</block>
     </scroll-view>
   </view>
+  <view class="divide"></view>
    <view class="page-bottom">
     <view class="book-catalog-seek" bindtap="off_canvas">
-         <view class="book-catalog-item">
-            查看目录
-        </view>
+         <view class="book-catalog-item">查看目录</view>
         <view class="book-catalog-time">
               更新于 {{updatetime}}
         </view>
@@ -64,12 +62,14 @@
                 <view class="book-bd">{{item.title}}</view>
                 <view class="list-ft">{{item.content}}</view>
                 <view class="list-time">
-                    <image class="list-img" src="../../asset/images/book.jpg" mode="scaleToFill"></image>
+                    <image class="list-img" src="../../asset/images/book.png" mode="scaleToFill"></image>
                     {{item.count}}
                 </view>
             </navigator> 
         </view>
     </block>
+
+    <view class="more_copy" bindtap="off_canvas"><image class="more" src="../../asset/images/more.png" mode="scaleToFill"></image></view>
 
       <view class="nav-bottom">
             <view class="m-nav">

@@ -1,156 +1,32 @@
 <view>
 	<!-- 女生分类 -->
-		<view class="classify-name">
-			
-			<view class="weui-cells__title"><text>女生分类</text></view>
-        	<view class="weui-cells weui-cells_after-title">
-	           <view class="weui-cell " bindtap="tolist" data-type="现言">
-	                <view class="weui-cell__hd">
-	                    <image src="../../asset/images/classify/1.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-	                	<text class="weui-cell__bd">现言</text>
-	                	<view class="weui-cell__fd">
-	                		<text class="weui-cell__ft">寒门总裁</text>
-		                		<text class="weui-cell__ft">婚姻</text>
-		                		<text class="weui-cell__ft">都市生活</text>
-		                		<text class="weui-cell__ft">宝宝</text>
-	                	</view>
-	                	
-	                </view>
-	            </view>
-
-	            <view class="weui-cell" bindtap="tolist" data-type="古言">
-	                <view class="weui-cell__hd">
-	                    <image src="../../asset/images/classify/2.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">古言</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">穿越</text>
-	                		<text class="weui-cell__ft">架空</text>
-	                		<text class="weui-cell__ft">宫斗宅斗</text>
-	                		<text class="weui-cell__ft">情仇爱恨</text>
-	                		<text class="weui-cell__ft">女尊</text>
-	                		<text class="weui-cell__ft">种田</text>
-		                </view>
-	            	</view>
-	        	</view>
-
-	            <view class="weui-cell" bindtap="tolist" data-type="幻言">
-	                <view class="weui-cell__hd">
-	                   <image src="../../asset/images/classify/3.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">幻言</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">仙侣奇缘</text>
-		                	<text class="weui-cell__ft">江湖奇缘</text>
-		                </view>
-		            </view>
-	       		</view>
-
-
-	            <view class="weui-cell" bindtap="tolist" data-type="校园">
-	                <view class="weui-cell__hd">
-	                    <image src="../../asset/images/classify/4.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">校园</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">青春年华</text>
-		                	<text class="weui-cell__ft">校园魔幻</text>
-		                	<text class="weui-cell__ft">青春校园</text>
-		                	<text class="weui-cell__ft">学生</text>
-		                </view>
-		            </view>
-		        </view>
-	        </view>
-		</view>
-
-	<!-- 男生分类 -->
-	<view>
-		<view class="classify-name">
-			<view class="weui-cells__title"><text>男生分类</text></view>
-        	<view class="weui-cells weui-cells_after-title">
-	            <view class="weui-cell" bindtap="tolist" data-type="都市">
-	                <view class="weui-cell__hd">
-	                   <image src="../../asset/images/classify/5.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">都市</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">生活</text>
-		                	<text class="weui-cell__ft">异能</text>
-		                	<text class="weui-cell__ft">重生</text>
-		                	<text class="weui-cell__ft">热血</text>
-		                </view>
-	            	</view>
-	            </view>
-
-	            <view class="weui-cell" bindtap="tolist" data-type="玄幻">
-	                <view class="weui-cell__hd">
-	                   <image src="../../asset/images/classify/6.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">玄幻</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">东方玄幻</text>
-		                	<text class="weui-cell__ft">异界大陆</text>
-		                	<text class="weui-cell__ft">转世重生</text>
-		                	<text class="weui-cell__ft">远古神话</text>
-		                </view>
-		            </view>
-	            </view>
-
-
-	            <view class="weui-cell" bindtap="tolist" data-type="仙侠">
-	                <view class="weui-cell__hd">
-	                    <image src="../../asset/images/classify/7.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">仙侠</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">现代修真</text>
-		                	<text class="weui-cell__ft">洪荒封神</text>
-		                	<text class="weui-cell__ft">凡人</text>
-		                	<text class="weui-cell__ft">丹药</text>
-		                </view>
-		            </view>
-	            </view>
-
-
-	            <view class="weui-cell" bindtap="tolist" data-type="灵异">
-	                <view class="weui-cell__hd">
-	                    <image src="../../asset/images/classify/8.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">灵异</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">灵异鬼怪</text>
-		                	<text class="weui-cell__ft">恐怖惊悚</text>
-		                	<text class="weui-cell__ft">悬疑探险</text>
-		                	<text class="weui-cell__ft">侦探推理</text>
-		                </view>
-		            </view>
-	            </view>
-
-
-	            <view class="weui-cell" bindtap="tolist" data-type="历史">
-	                <view class="weui-cell__hd">
-	                   <image src="../../asset/images/classify/9.jpg"></image>
-	                </view>
-	                <view class="weui-cell__ht">
-		                <view class="weui-cell__bd">历史</view>
-		                <view class="weui-cell__fd">
-		                	<text class="weui-cell__ft">架空历史</text>
-		                	<text class="weui-cell__ft">两宋元明</text>
-		                	<text class="weui-cell__ft">秦汉三国</text>
-		                	<text class="weui-cell__ft">权谋</text>
-		                </view>
-		            </view>
-	            </view>
-	        </view>
-		</view>
+	<view class="classify">
+		 女生频道 
 	</view>
+	<block  wx:for="{{GirlLists}}" wx:key="classifylists.id">  
+        <navigator class="nav" url="../list/list?type={{item.type}}" open-type="navigate">    
+            <view class="classify-lists">
+                <image class="classify-img" src="{{item.img}}" ></image>
+                <view class="list-content {{index == Gid ? 'list-content-last' : ''}}" >
+                    <view class="classify-type">{{item.type}}</view>
+                    <text space="ensp" class="list-desc">{{item.desc}}</text>
+                </view>
+            </view>
+        </navigator>
+    </block>
+    <view class="divide"></view>
+    <view class="classify">
+		 男生频道 
+	</view>
+	<block  wx:for="{{BoyLists}}" wx:key="classifylists.id">  
+        <navigator class="nav" url="../list/list?type={{item.type}}" hover-class="none" open-type="navigate">    
+            <view class="classify-lists">
+                <image class="classify-img" src="{{item.img}}" ></image>
+                <view class="list-content {{index == Bid ? 'list-content-last' : ''}}" >
+                    <view class="classify-type">{{item.type}}</view>
+                    <text space="ensp" class="list-desc">{{item.desc}}</text>
+                </view>
+            </view>
+        </navigator>
+    </block>
 </view>

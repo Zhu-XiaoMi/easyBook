@@ -14,7 +14,7 @@
 }
 /* 搜索框 */
 .search-box {
-   height: 65%;
+   height: 66%;
    width: 65%;
    border-radius: 5rpx;
    font-size: 23rpx;
@@ -42,7 +42,7 @@
   height:227rpx;
   margin: 0rpx 35rpx;
   display: flex;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #f2f2f2;
   align-items: center;
 }
 .novel-list1{
@@ -69,6 +69,7 @@
 }
 .list-intro{
   font-size: 25rpx;
+  color: #666666;
   display: -webkit-box;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -77,6 +78,7 @@
 }
 .list-author{
   font-size: 25rpx;
+  color: #a8a8a8;
 }
 .list-bottom{
   font-size: 25rpx;
@@ -90,6 +92,7 @@
   height: 30rpx;
   text-align: center;
   line-height: 30rpx;
+  color: #a8a8a8;
   border: 1px solid #d4d5da;
   border-radius: 5rpx;
 }

@@ -1,27 +1,22 @@
  <view> 
         <block  wx:for="{{novellists}}" wx:key="novellists.id">  
         <navigator class="nav" url="../details/details?novelid={{item.id}}" hover-class="none" open-type="navigate">    
-            <view class="novel-lists">
-                <image class="novel-img" src="{{item.img}}" ></image>
+            <view class="novel-lists {{index == Gid ? 'list-content-last' : ''}}">
+                <view><image class="novel-img" src="{{item.img}}" ></image></view>
                 <view class="list-content" >
                     <view class="novel-title">{{item.title}}</view>
-                    <view class="list-intro">
-                         {{item.description}}
-                    </view>
+                    <view class="list-intro">{{item.description}}</view>
                     <view class="list-bottom">
-                        <view class="list-author">
-                        	{{item.author}}
-                        </view>  
-                        <view class="state"> 
-                            {{item.state}}
-                        </view> 	   
+                        <view class="m-left">
+                            <image class="author-img" src="../../asset/images/zuozhe.png" mode="scaleToFill"></image>
+                            <view class="list-author">{{item.author}}</view>
+                        </view>
+                        <view class="state">{{item.state}}</view>    
                     </view>
                 </view>
             </view>
         </navigator>
         </block>
-        <view>
-            上拉加载更多
-        </view>
+        <view class="finish" hidden="{{finish}}">已加载全部</view>
  </view>
  

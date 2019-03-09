@@ -1,51 +1,63 @@
 .novel-lists{
-	height: 227rpx;
+	height: 220rpx;
 	margin: 0 35rpx;
 	display: flex;
-	border-bottom: 1px solid #ddd;
-	align-items: center;
+	border-bottom: 1px solid #f2f2f2;
+	
 }
 .nav{
 	display: block;
 }
 .novel-img{
-	width: 176rpx;
-    height: 170rpx;
+	width: 120rpx;
+    height: 165rpx;
+    margin: 27rpx 0;
     box-shadow:1px 1px 5px #d4d5da;
 }
 .list-content{
 	display: flex;
-	height: 188rpx;
-	width: 100%;
+	height: 176rpx;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-left: 35rpx; 
+	margin:16rpx 0 0 36rpx; 
 }
 .novel-title{
 	font-size: 35rpx;
 }
 .list-intro{
- 	font-size: 25rpx;
+ 	font-size: 23rpx;
  	display: -webkit-box;
  	text-overflow: ellipsis;
  	overflow: hidden;
  	-webkit-box-orient: vertical;
  	-webkit-line-clamp: 2;
- 	color: gray;
+ 	color: #4b4b4b;
 }
 .list-bottom{
-	font-size: 25rpx;
-	color: gray;
+	color: #a3a3a3;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-	
+}
+.author-img{
+	width: 29rpx;
+	height: 29rpx;
+	margin-right: 4rpx;
+}
+.m-left{
+	display: flex;
+	align-items: center;
+}
+.list-author{
+	font-size: 24rpx;
 }
 .state{
-	width: 70rpx;
-	height: 30rpx;
-	text-align: center;
-	line-height: 30rpx;
-	border: 1px solid #d4d5da;
-	border-radius: 5rpx;
+	font-size: 24rpx;
 }
-
+.finish{
+	height: 70rpx;
+	line-height: 70rpx;
+	text-align: center;
+	font-size: 28rpx;
+	color: #999;
+}

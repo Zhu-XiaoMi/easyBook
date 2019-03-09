@@ -14,7 +14,7 @@ Page({
 		})
 	},
 
-    query(){
+    query(e){
     	let that = this
     	that.Main()
     },
@@ -45,6 +45,7 @@ Page({
 	getNovelInfo(){
 		let that = this
 		let inputValue = that.data.inputValue
+        console.log(inputValue);
     	const db = wx.cloud.database()
         let res = db.collection('novelinfo').where({
         	title: db.RegExp({

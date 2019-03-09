@@ -3,35 +3,30 @@
 		{{chaptertitle}}
 	</view>
 	<view class="book-content" >
-		<view hidden="{{!look}}">
-			<view class="nav-shelf" hidden="{{has}}" style="background:{{color}};color:{{font_color}}" bindtap="joinShelf">加入书架</view>
-			<view class="nav-shelf" hidden="{{!has}}" style="background:{{color}};color:{{font_color}}">已在书架</view>
-		</view>
-		
-		
-		<text class="m-read-content" space="emsp" bindtap="lookShelf" style="color:{{font_color}}">{{content}}</text>
+
+		<text class="m-read-content" decode="true" bindtap="lookShelf" style="background:{{color}};color:{{font_color}}">{{content}}</text>
 	</view>
 
 	<view class="book-button">
-		<view bindtap="toChapterLast" hidden="{{chapterid == 1}}" class="nav-button">
+		<view bindtap="toChapterLast" style="background:{{bcolor}};color:{{font_color}}"  hidden="{{chapterid == 1}}" class="nav-button">
 			上一章
 		</view>
 		<view hidden="{{chapterid != 1}}" class="inactive">
 			上一章
 		</view>
-		<view class="nav-button"  bindtap="off_canvas">目录</view>
-		<view bindtap="toChapterNext" hidden="{{chapterid == count}}" class="nav-button">
+		<view class="nav-button" style="background:{{bcolor}};color:{{font_color}}" bindtap="off_canvas">目录</view>
+		<view bindtap="toChapterNext" style="background:{{bcolor}};color:{{font_color}}" hidden="{{chapterid == count}}" class="nav-button">
 			下一章
 		</view>
 		<view hidden="{{chapterid != count}}" class="inactive">
 			下一章
 		</view>
 	</view>
-	<view class="page-top {{open ? 'page-top-show' : ''}}">
+	<view class="page-top {{open ? 'page-top-show' : ''}}" style="background:{{pcolor}}">
 		<scroll-view scroll-y style="height:100%;" scroll-top="0">
 		<block wx:for="{{nav_list}}" wx:key="nav_list.id">
-		   	<view class="nav-list">
-		      <view bindtap="tolist" style="{{chapterid == item.chapterid? 'color:blue' :'' }}" data-chapterid = "{{item.chapterid}}">
+		   	<view class="nav-list" style="border-bottom:{{border_bottom}}">
+		      <view bindtap="tolist" style="{{chapterid == item.chapterid? 'color:skyblue' :'' }}" data-chapterid = "{{item.chapterid}}">
 		      	<text>{{item.title}}</text>
 		      </view>
 		    </view>
@@ -44,25 +39,27 @@
 		<view class="panel-content">
 			<view class="panel-menu" bindtap="off_canvas">
 				<image class="m-img" src="../../asset/images/menu.png" mode="scaleToFill"></image>
+				<view class="m-menu">目录</view>
 		    </view>
-		    <view class="panel-set" bindtap="off_set">
-				<view class="m-item" bindtap="toChapterLast" hidden="{{chapterid == 1}}">上一章</view>
-				<view hidden="{{chapterid != 1}}" class="m-item1">
-					上一章
-				</view>
-				<view class="m-item" bindtap="toChapterNext" hidden="{{chapterid == count}}">下一章</view>
-				<view hidden="{{chapterid != count}}" class="m-item1">
-					下一章
-				</view>
-			</view>
-			<view bindtap="off_day">
+		    <view bindtap="off_day" class="off_day">
 				<view class="panel-item" hidden="{{day}}">
-					<image class="m-img" src="../../asset/images/menu.png" mode="scaleToFill"></image>
+					<image class="m-img" src="../../asset/images/night.png" mode="scaleToFill"></image>
+					<view class="m-menu">夜间</view>
 				</view>
 				<view class="panel-item" hidden="{{!day}}">
-					<image class="m-img" src="../../asset/images/menu.png" mode="scaleToFill"></image>
+					<image class="m-img" src="../../asset/images/day.png" mode="scaleToFill"></image>
+					<view class="m-menu">白天</view>
 				</view>
 			</view>
+		    <view class="panel-set" bindtap="off_set">
+                <view class="ico-add">
+                	<image class="ico-add-item" src="../../asset/images/add.png" mode="scaleToFill"></image>
+                </view>
+				<view class="join-shelf">
+					加入书架
+				</view>
+			</view>
+			
 		</view>	
 	</view>
     </view>

@@ -3,8 +3,10 @@ Page({
 	 * 页面的初始数据
 	 */
 	data:{
-		novellists:[ ],
-		type:""
+		novellists: [ ],
+		type: "",
+		count: 0,
+		finish: true
 	},
 	
 	onLoad(options){
@@ -12,8 +14,10 @@ Page({
         that.setData({
         	type: options.type
         })
-        
-
+        wx.setNavigationBarTitle({
+	      title: options.type
+	    })
+	   
 	},
 
 	onShow(){
@@ -32,7 +36,8 @@ Page({
 
 	listModel(){
 		let that = this
-		let init = that.getNovelInfo()
+		let count = that.data.count
+		let init = that.getNovelInfo(count)
 		return {
 			init: init
 		}
@@ -48,12 +53,12 @@ Page({
 		return renderView;
 	},
 	
-	getNovelInfo(){
+	getNovelInfo(count){
 		let that = this
         const db = wx.cloud.database()
         let res = db.collection('novelinfo').where({
-            type:that.data.type
-        }).limit(20).field({
+            type: that.data.type
+        }).skip(count).limit(20).field({
         	id:true,
             img:true,
             title:true,
@@ -63,5 +68,27 @@ Page({
         })
         .get()
         return res;
+	},
+	onReachBottom(){
+		let that = this
+		let data = that.data.novellists
+		that.data.count = that.data.count + 20
+		let renderView = that.getNovelInfo(that.data.count)
+		renderView.then(res=>{
+			if(res.data.length == 0){
+				that.setData({
+					finish: false
+				})
+			}
+			else{
+				let newArr = data.concat(res.data)
+				that.setData({
+					novellists: newArr
+				})
+			}
+			
+		})
+
 	}
 })
+	
